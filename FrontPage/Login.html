@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../layui/layui.all.js"></script>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body onload="d()">
+<form  action="LoginServlet" method="get">
+    <div class="login-box" style="visibility: hidden">
+        <h1 class="layui-anim-rotate">Login</h1>
+        <div class="textbox">
+            <input type="text" placeholder="Username" name="username" value=""/>
+        </div>
+        <div class="textbox">
+            <input type="password" placeholder="Password" name="password" value=""/>
+            <input type="hidden" name="operate" value="login"/>
+        </div>
+        <input class="btn" type="submit" name="submit" value="LOGIN"/><br>
+        <input class="btn" type="reset" name="reset" value="Clean"/><br>
+        <a href="Input/Register.jsp" >☞点击此处进行注册？</a>
+    </div>
+</form>
+<script>
+    function c(){
+        var d = document.getElementsByClassName("login-box")
+        d[0].style.visibility = 'visible'
+    }
+    function d(){
+        setTimeout("c()",600)
+    }
+</script>
+</body>
+</html>
